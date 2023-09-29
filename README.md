@@ -1,4 +1,4 @@
-# Fortune SaaS ERP
+# Fortune ERP
 
 <!-- ![Project Logo](link_to_your_logo.png) -->
 

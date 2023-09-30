@@ -1,6 +1,9 @@
 import "@mantine/core/styles.css";
 import React from "react";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
+import { RouterTransition } from "fortune/components/RouterTransition";
+import "@mantine/nprogress/styles.css";
+import "@mantine/notifications/styles.css";
 
 export const metadata = {
   title: "Fortune",
@@ -12,6 +15,7 @@ export default function RootLayout({ children }: { children: any }) {
     <html lang="en">
       <head>
         <ColorSchemeScript />
+
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"
@@ -21,23 +25,25 @@ export default function RootLayout({ children }: { children: any }) {
       <body>
         <MantineProvider
           theme={{
-            primaryColor: "bright-pink",
+            primaryColor: "pale-blue",
             colors: {
-              "bright-pink": [
-                "#fff4e2",
-                "#ffe9cc",
-                "#ffd09c",
-                "#fdb766",
-                "#fca13a",
-                "#fb931d",
-                "#fc8c0c",
-                "#e17900",
-                "#c86a00",
-                "#ae5a00",
+              "pale-blue": [
+                "#eef3ff",
+                "#dce4f5",
+                "#b9c7e2",
+                "#94a8d0",
+                "#748dc1",
+                "#5f7cb8",
+                "#5474b4",
+                "#44639f",
+                "#39588f",
+                "#2d4b81",
               ],
             },
           }}
         >
+          <RouterTransition />
+
           {children}
         </MantineProvider>
       </body>
